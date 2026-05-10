@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Caro Hardware - Browse our complete product catalog" />
+  <meta name="keywords" content="hardware store, power tools, building materials, plumbing, electrical, paint, safety gear" />
+  <title>Products | Caro Hardware</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            caro: {
+              orange: '#E8620A',
+              dark: '#1A1A1A',
+              gray: '#2D2D2D',
+              light: '#F5F0EB',
+              accent: '#FF8534'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="h-full">
+  <div class="app-root" id="appRoot">
+    <nav id="navbar" class="fixed inset-x-0 top-0 z-50 bg-[#0A1026]/95 backdrop-blur-xl border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-caro-orange rounded-sm shadow-lg shadow-caro-orange/20 flex items-center justify-center">
+              <i data-lucide="wrench" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="font-mono-brand text-white text-lg tracking-tight font-bold">CARO HARDWARE</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="index.html#home" class="nav-link text-white/70 hover:text-white text-sm font-medium">Home</a>
+            <a href="products.html" class="nav-link text-white hover:text-caro-orange text-sm font-medium">Products</a>
+            <a href="index.html#services" class="nav-link text-white/70 hover:text-white text-sm font-medium">Services</a>
+            <a href="index.html#about" class="nav-link text-white/70 hover:text-white text-sm font-medium">About</a>
+            <a href="index.html#contact" class="inline-flex items-center bg-caro-orange hover:bg-caro-accent text-white text-sm font-semibold tracking-wide px-5 py-2.5 rounded-sm shadow-lg shadow-caro-orange/20 transition-all">Contact</a>
+          </div>
+          <button id="menuBtn" class="md:hidden p-2 text-white" aria-label="Toggle navigation">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu md:hidden bg-[#0A1026]/95 border-t border-white/10">
+        <div class="px-4 py-4 flex flex-col gap-3">
+          <a href="index.html#home" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Home</a>
+          <a href="products.html" class="mobile-link text-caro-orange text-sm font-medium">Products</a>
+          <a href="index.html#services" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Services</a>
+          <a href="index.html#about" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">About</a>
+          <a href="index.html#contact" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-caro-light pt-24 pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="premium-badge">Our Catalog</span>
+          <h1 class="mt-5 text-4xl sm:text-5xl font-bold text-caro-dark">Complete Product Catalog</h1>
+          <div class="accent-line w-16 h-1 bg-gradient-to-r from-caro-orange to-transparent mx-auto mt-5"></div>
+          <p class="mt-6 text-caro-dark/70 text-lg max-w-2xl mx-auto">Explore our extensive range of quality hardware products. From power tools to safety gear, find everything you need for your next project.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="detailedProductGrid"></div>
+      </div>
+    </section>
+
+    <footer class="bg-[#0A1229] border-t border-white/10 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-4 mb-10">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-11 h-11 rounded-2xl bg-caro-orange flex items-center justify-center text-white"><i data-lucide="wrench" class="w-5 h-5"></i></div>
+              <div>
+                <p class="font-bold text-white">CARO HARDWARE</p>
+                <p class="text-white/50 text-sm">Premium hardware supply since 2010.</p>
+              </div>
+            </div>
+            <p class="text-white/40 text-sm leading-relaxed">Trusted by professionals and home renovators for tools, materials, and fast service.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white mb-4">Quick Links</p>
+            <nav class="space-y-3 text-white/50 text-sm">
+              <a href="index.html#home" class="block hover:text-caro-orange transition-colors">Home</a>
+              <a href="products.html" class="block hover:text-caro-orange transition-colors">Products</a>
+              <a href="index.html#services" class="block hover:text-caro-orange transition-colors">Services</a>
+              <a href="index.html#about" class="block hover:text-caro-orange transition-colors">About</a>
+              <a href="index.html#contact" class="block hover:text-caro-orange transition-colors">Contact</a>
+            </nav>
+          </div>
+          <div>
+            <p class="font-semibold text-white mb-4">Services</p>
+            <div class="space-y-3 text-white/50 text-sm">
+              <p>Tool Rental</p>
+              <p>Delivery Services</p>
+              <p>Project Consultation</p>
+              <p>Bulk Supply</p>
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white mb-4">Connect</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="facebook" class="w-4 h-4 text-white/70"></i></span>
+              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="twitter" class="w-4 h-4 text-white/70"></i></span>
+              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="instagram" class="w-4 h-4 text-white/70"></i></span>
+              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="linkedin" class="w-4 h-4 text-white/70"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 text-center text-white/40 text-sm">© 2026 Caro Hardware. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    // Load detailed products on this page
+    document.addEventListener('DOMContentLoaded', function() {
+      const detailedProductGrid = document.getElementById('detailedProductGrid');
+      products.forEach((product, index) => {
+        const card = document.createElement('article');
+        card.className = 'bg-white rounded-[28px] overflow-hidden shadow-xl shadow-slate-900/5';
+        card.innerHTML = `
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="${product.img}" alt="${product.title}" class="h-full w-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-caro-orange/90 text-white">
+                <i data-lucide="${product.icon}" class="w-6 h-6"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold text-caro-dark mb-4">${product.title}</h3>
+            <p class="text-caro-dark/60 leading-relaxed mb-6">${product.desc}</p>
+            <button class="inline-flex items-center gap-2 bg-caro-orange hover:bg-caro-accent text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-lg shadow-caro-orange/25">
+              <span>Inquire Now</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+        detailedProductGrid.appendChild(card);
+      });
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
