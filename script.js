@@ -238,13 +238,13 @@ function setupWhatsapp() {
   const whatsappMenu = document.getElementById('whatsappMenu');
   const whatsappProducts = document.getElementById('whatsappProducts');
   const quickOrder = document.getElementById('quickOrder');
-  const GMAIL_TO = 'edisonkipkemoi319@gmail.com';
+  const WHATSAPP_PHONE = '0710241295';
 
   whatsappBtn.addEventListener('click', (event) => {
     event.stopPropagation();
     whatsappMenu.classList.toggle('hidden');
     if (!whatsappMenu.classList.contains('hidden')) {
-      renderWhatsappProducts(whatsappProducts, GMAIL_TO);
+      renderWhatsappProducts(whatsappProducts, WHATSAPP_PHONE);
     }
   });
 
@@ -256,18 +256,18 @@ function setupWhatsapp() {
 
   quickOrder.addEventListener('click', () => {
     const message = encodeURIComponent('Hi Caro Hardware! I\'d like to place an order. Please help me with available products and pricing.');
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_TO}&su=Quick Order&body=${message}`;
-    window.open(gmailUrl, '_blank');
+    const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
     whatsappMenu.classList.add('hidden');
   });
 }
 
-function renderWhatsappProducts(container, gmailTo) {
+function renderWhatsappProducts(container, whatsappPhone) {
   container.innerHTML = products
     .map(
       (product) => `
-      <button class="w-full px-4 py-2 text-left hover:bg-blue-50 border-b text-sm font-medium text-caro-dark transition-colors whatsapp-product-item" data-product="${product.title}">
-        <span class="text-blue-600 mr-2">✓</span>${product.title}
+      <button class="w-full px-4 py-2 text-left hover:bg-green-50 border-b text-sm font-medium text-caro-dark transition-colors whatsapp-product-item" data-product="${product.title}">
+        <span class="text-green-600 mr-2">✓</span>${product.title}
       </button>`
     )
     .join('');
@@ -277,8 +277,8 @@ function renderWhatsappProducts(container, gmailTo) {
       event.preventDefault();
       const name = item.dataset.product;
       const message = encodeURIComponent(`Hi Caro Hardware, I'm interested in ordering: ${name}. Can you provide more details and pricing?`);
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${gmailTo}&su=Product Inquiry: ${name}&body=${message}`;
-      window.open(gmailUrl, '_blank');
+      const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
       document.getElementById('whatsappMenu').classList.add('hidden');
     });
   });
