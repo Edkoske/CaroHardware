@@ -1,0 +1,15 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D2D2D" />
+      <stop offset="100%" stop-color="#E8620A" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#121827" />
+  <circle cx="400" cy="280" r="180" fill="url(#sgGrad)" opacity="0.95" />
+  <path d="M 320 320 Q 400 140 480 320" fill="#0F1631" />
+  <rect x="325" y="320" width="150" height="140" rx="40" fill="#0F1631" />
+  <path d="M 350 380 L 450 380" stroke="#E8620A" stroke-width="18" stroke-linecap="round" />
+  <path d="M 360 430 L 440 430" stroke="#E8620A" stroke-width="18" stroke-linecap="round" />
+  <text x="50%" y="560" text-anchor="middle" fill="#F5F0EB" font-family="Outfit, sans-serif" font-size="42" font-weight="700">Safety Gear</text>
+</svg>

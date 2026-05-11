@@ -3,37 +3,37 @@ const products = [
     icon: 'zap',
     title: 'Power Tools',
     desc: 'Drills, saws, grinders and more from top brands.',
-    img: 'https://via.placeholder.com/400x300/E8620A/FFFFFF?text=Power+Tools'
+    img: 'images/product-power-tools.jpg'
   },
   {
     icon: 'landmark',
     title: 'Building Materials',
     desc: 'Cement, lumber, steel and essential construction supplies.',
-    img: 'https://via.placeholder.com/400x300/2D2D2D/FFFFFF?text=Building+Materials'
+    img: 'images/product-building-materials.jpg'
   },
   {
     icon: 'droplets',
     title: 'Plumbing Supplies',
     desc: 'Pipes, fittings, valves and complete plumbing solutions.',
-    img: 'https://via.placeholder.com/400x300/F5F0EB/E8620A?text=Plumbing+Supplies'
+    img: 'images/product-plumbing-supplies.jpg'
   },
   {
     icon: 'plug',
     title: 'Electrical Equipment',
     desc: 'Wiring, panels, switches and electrical components.',
-    img: 'https://via.placeholder.com/400x300/2D2D2D/FFFFFF?text=Electrical+Equipment'
+    img: 'images/product-electrical-equipment.jpg'
   },
   {
     icon: 'paintbrush',
     title: 'Paint & Finishing',
     desc: 'Interior and exterior paints, brushes and finishing tools.',
-    img: 'https://via.placeholder.com/400x300/F5F0EB/E8620A?text=Paint+%26+Finishing'
+    img: 'images/product-paint-finishing.jpg'
   },
   {
     icon: 'hard-hat',
     title: 'Safety Gear',
     desc: 'Helmets, gloves, goggles and protective equipment.',
-    img: 'https://via.placeholder.com/400x300/2D2D2D/FFFFFF?text=Safety+Gear'
+    img: 'images/product-safety-gear.jpg'
   }
 ];
 
@@ -77,12 +77,9 @@ function renderProducts() {
     card.className = 'product-card bg-white rounded-sm overflow-hidden sr';
     card.style.transitionDelay = `${index * 0.1}s`;
     card.innerHTML = `
-      <div class="h-40 flex items-center justify-center relative overflow-hidden" style="background-color: ${colors[index]};">
-        <div class="text-center text-white">
-          <div class="text-2xl font-bold mb-2">${texts[index]}</div>
-          <div class="text-sm opacity-80">Quality Products</div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+      <div class="h-40 relative overflow-hidden">
+        <img src="${product.img}" alt="${product.title}" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
       </div>
       <div class="p-6">
         <h3 class="font-bold text-caro-dark text-lg">${product.title}</h3>

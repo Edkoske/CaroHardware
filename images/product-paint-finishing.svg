@@ -1,0 +1,15 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="pfGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5F0EB" />
+      <stop offset="100%" stop-color="#E8620A" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#172135" />
+  <rect x="150" y="170" width="500" height="260" rx="32" fill="url(#pfGrad)" />
+  <path d="M 240 300 L 310 300 L 330 380 L 270 380 Z" fill="#0F1631" opacity="0.95" />
+  <path d="M 470 260 L 640 260" stroke="#0F1631" stroke-width="24" stroke-linecap="round" />
+  <path d="M 520 270 C 540 240 610 240 630 270" stroke="#0F1631" stroke-width="22" fill="none" />
+  <rect x="255" y="390" width="190" height="30" rx="12" fill="#0F1631" />
+  <text x="50%" y="560" text-anchor="middle" fill="#0F1631" font-family="Outfit, sans-serif" font-size="42" font-weight="700">Paint & Finishing</text>
+</svg>

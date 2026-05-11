@@ -1,0 +1,14 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="eeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D2D2D" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#0F172A" />
+  <rect x="180" y="160" width="440" height="280" rx="32" fill="url(#eeGrad)" opacity="0.95" />
+  <path d="M 310 250 L 390 350 L 350 350 L 430 460" stroke="#E8620A" stroke-width="24" stroke-linecap="round" fill="none" />
+  <path d="M 340 430 L 520 310" stroke="#E8620A" stroke-width="18" stroke-linecap="round" />
+  <circle cx="500" cy="210" r="20" fill="#E8620A" />
+  <text x="50%" y="560" text-anchor="middle" fill="#FFFFFF" font-family="Outfit, sans-serif" font-size="42" font-weight="700">Electrical Equipment</text>
+</svg>
