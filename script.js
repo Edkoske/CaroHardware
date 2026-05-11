@@ -98,7 +98,7 @@ function renderProducts() {
       event.preventDefault();
       const productName = link.dataset.product;
       const message = encodeURIComponent(`Hi Caro Hardware, I'm interested in ordering ${productName}. Can you show me available options and pricing?`);
-      const whatsappUrl = `https://wa.me/0710241295?text=${message}`;
+      const whatsappUrl = `https://wa.me/+254710241295?text=${message}`;
       window.open(whatsappUrl, '_blank');
     });
   });
@@ -238,7 +238,7 @@ function setupWhatsapp() {
   const whatsappMenu = document.getElementById('whatsappMenu');
   const whatsappProducts = document.getElementById('whatsappProducts');
   const quickOrder = document.getElementById('quickOrder');
-  const WHATSAPP_PHONE = '0710241295';
+  const WHATSAPP_PHONE = '+254710241295';
 
   whatsappBtn.addEventListener('click', (event) => {
     event.stopPropagation();
