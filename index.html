@@ -1,296 +1,304 @@
 ﻿<!doctype html>
 <html lang="en" class="h-full">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Caro Hardware - Quality hardware solutions for every project." />
-  <meta name="keywords" content="hardware store, power tools, building materials, plumbing, electrical, paint, safety gear" />
-  <title>Caro Hardware | Quality Hardware Solutions</title>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caro Hardware - Quality hardware solutions for every project. Power tools, building materials, plumbing, electrical, paint and safety gear.">
+  <meta name="keywords" content="hardware store, power tools, building materials, plumbing, electrical, paint, safety gear">
+  <title>Caro Hardware - Quality Hardware Solutions</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            caro: {
-              orange: '#E8620A',
-              dark: '#1A1A1A',
-              gray: '#2D2D2D',
-              light: '#F5F0EB',
-              accent: '#FF8534'
-            }
+            caro: { orange: '#E8620A', dark: '#1A1A1A', gray: '#2D2D2D', light: '#F5F0EB', accent: '#FF8534' }
           }
         }
       }
     }
   </script>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="h-full">
+  <link rel="stylesheet" href="styles.css">
+ </head>
+ <body class="h-full">
   <div class="app-root" id="appRoot">
-    <nav id="navbar" class="fixed inset-x-0 top-0 z-50 bg-[#0A1026]/95 backdrop-blur-xl border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 sm:h-20">
-          <a href="#home" class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-caro-orange rounded-sm shadow-lg shadow-caro-orange/20 flex items-center justify-center">
-              <i data-lucide="wrench" class="w-5 h-5 text-white"></i>
-            </div>
-            <span class="font-mono-brand text-white text-lg tracking-tight font-bold">CARO HARDWARE</span>
-          </a>
-          <div class="hidden md:flex items-center gap-8">
-            <a href="#home" class="nav-link text-white/70 hover:text-white text-sm font-medium">Home</a>
-            <a href="#products" class="nav-link text-white/70 hover:text-white text-sm font-medium">Products</a>
-            <a href="#services" class="nav-link text-white/70 hover:text-white text-sm font-medium">Services</a>
-            <a href="#about" class="nav-link text-white/70 hover:text-white text-sm font-medium">About</a>
-            <a href="#contact" class="inline-flex items-center bg-caro-orange hover:bg-caro-accent text-white text-sm font-semibold tracking-wide px-5 py-2.5 rounded-sm shadow-lg shadow-caro-orange/20 transition-all">Contact</a>
-          </div>
-          <button id="menuBtn" class="md:hidden p-2 text-white" aria-label="Toggle navigation">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-          </button>
-        </div>
+   <!-- NAVBAR -->
+   <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-caro-dark/95 backdrop-blur-md transition-shadow duration-300" style="background: rgba(10,14,39,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(232,98,10,0.1);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="#home" class="flex items-center gap-2">
+       <div class="w-9 h-9 bg-caro-orange rounded-sm flex items-center justify-center shadow-lg shadow-caro-orange/20">
+        <i data-lucide="wrench" class="w-5 h-5 text-white"></i>
+       </div><span class="font-mono-brand font-bold text-white text-lg tracking-tight">CARO<span class="text-caro-orange">.</span></span> </a>
+      <div class="hidden md:flex items-center gap-8">
+       <a href="#home" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Home</a>
+       <a href="#products" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Products</a>
+       <a href="#services" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Services</a>
+       <a href="#about" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">About</a>
+       <a href="#contact" class="bg-caro-orange hover:bg-caro-accent text-white px-5 py-2.5 rounded-sm text-sm font-semibold tracking-wide transition-all shadow-lg shadow-caro-orange/20">Contact</a>
       </div>
-      <div class="mobile-menu md:hidden bg-[#0A1026]/95 border-t border-white/10">
-        <div class="px-4 py-4 flex flex-col gap-3">
-          <a href="#home" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Home</a>
-          <a href="#products" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Products</a>
-          <a href="#services" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Services</a>
-          <a href="#about" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">About</a>
-          <a href="#contact" class="mobile-link text-white/70 hover:text-caro-orange text-sm font-medium">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <section id="home" class="hero-pattern relative min-h-[680px] flex items-center pt-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 relative z-10">
-        <div class="max-w-2xl">
-          <span class="premium-badge">Trusted Supplier</span>
-          <h1 id="heroHeadline" class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">Quality Hardware Solutions for Every Project</h1>
-          <p id="heroSub" class="mt-6 text-white/70 text-base sm:text-lg leading-relaxed">Your trusted partner in construction and home improvement. Premium tools, materials, and expert advice — all under one roof.</p>
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a href="#products" class="inline-flex items-center justify-center bg-caro-orange hover:bg-caro-accent text-white px-8 py-3.5 rounded-sm font-semibold transition-all shadow-lg shadow-caro-orange/25">Shop Now</a>
-            <a href="#contact" class="inline-flex items-center justify-center border border-white/15 text-white hover:border-caro-orange px-8 py-3.5 rounded-sm font-semibold transition-all">Contact Us</a>
-          </div>
-          <div class="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-4 text-white/80 text-sm">
-            <div>
-              <p class="text-3xl font-bold text-white">15K+</p>
-              <p class="mt-2 uppercase tracking-[0.2em] text-white/50 font-mono-brand">Products</p>
-            </div>
-            <div>
-              <p class="text-3xl font-bold text-white">10K+</p>
-              <p class="mt-2 uppercase tracking-[0.2em] text-white/50 font-mono-brand">Customers</p>
-            </div>
-            <div>
-              <p class="text-3xl font-bold text-white">14</p>
-              <p class="mt-2 uppercase tracking-[0.2em] text-white/50 font-mono-brand">Years</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="products" class="bg-caro-light py-20 sm:py-28">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14 sr">
-          <span class="premium-badge">Our Catalog</span>
-          <h2 class="mt-5 text-3xl sm:text-4xl font-bold text-caro-dark">Product Categories</h2>
-          <div class="accent-line w-16 h-1 bg-gradient-to-r from-caro-orange to-transparent mx-auto mt-5"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid"></div>
-      </div>
-    </section>
-
-    <section id="services" class="bg-[#0E162F] py-20 sm:py-28 border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14 sr">
-          <span class="premium-badge">What We Offer</span>
-          <h2 class="mt-5 text-3xl sm:text-4xl font-bold text-white">Our Services</h2>
-          <div class="accent-line w-16 h-1 bg-gradient-to-r from-caro-orange to-transparent mx-auto mt-5"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="serviceGrid"></div>
-      </div>
-    </section>
-
-    <section id="about" class="bg-caro-light py-20 sm:py-28">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div class="sr-left">
-            <div class="relative overflow-hidden rounded-3xl bg-caro-dark min-h-[360px] flex items-center justify-center">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(232,98,10,0.15),_transparent_35%)]"></div>
-              <div class="text-center relative z-10 px-8">
-                <i data-lucide="building-2" class="w-20 h-20 text-caro-orange/70 mx-auto"></i>
-                <p class="mt-6 text-white/40 font-mono-brand uppercase tracking-[0.35em] text-xs">Since 2010</p>
-              </div>
-            </div>
-          </div>
-          <div class="sr-right">
-            <span class="premium-badge">Who We Are</span>
-            <h2 id="aboutTitle" class="mt-5 text-3xl sm:text-4xl font-bold text-caro-dark">About Caro Hardware</h2>
-            <div class="accent-line w-16 h-1 bg-gradient-to-r from-caro-orange to-transparent mt-5"></div>
-            <p id="aboutText" class="mt-6 text-caro-dark/70 leading-relaxed">Founded in 2010, Caro Hardware has grown from a local hardware shop to one of the region's most trusted suppliers. We provide premium-quality tools, building materials, and expert advice to contractors, builders, and homeowners alike.</p>
-            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="rounded-xl bg-white p-5 border-l-2 border-caro-orange">
-                <p class="font-semibold text-caro-dark">Quality First</p>
-                <p class="text-caro-dark/50 text-sm mt-2">Only trusted brands and certified products.</p>
-              </div>
-              <div class="rounded-xl bg-white p-5 border-l-2 border-caro-orange">
-                <p class="font-semibold text-caro-dark">Expert Team</p>
-                <p class="text-caro-dark/50 text-sm mt-2">Decades of experience supporting every job.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-caro-gray py-20 sm:py-28">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14 sr">
-          <span class="premium-badge">Testimonials</span>
-          <h2 class="mt-5 text-3xl sm:text-4xl font-bold text-white">What Customers Say</h2>
-          <div class="w-16 h-1 bg-caro-orange mx-auto mt-5 rounded-full"></div>
-        </div>
-        <div class="relative overflow-hidden sr">
-          <div id="testimonialTrack" class="testimonial-track"></div>
-          <div class="mt-8 flex justify-center gap-3">
-            <button id="prevTest" class="w-10 h-10 rounded-full border border-white/20 text-white hover:border-caro-orange transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-            <div id="testDots" class="flex items-center gap-2"></div>
-            <button id="nextTest" class="w-10 h-10 rounded-full border border-white/20 text-white hover:border-caro-orange transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-caro-light py-20 sm:py-28">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14 sr">
-          <span class="font-mono-brand text-caro-orange text-xs uppercase tracking-[0.25em]">Get In Touch</span>
-          <h2 class="mt-5 text-3xl sm:text-4xl font-bold text-caro-dark">Contact Us</h2>
-          <div class="w-16 h-1 bg-caro-orange mx-auto mt-5 rounded-full"></div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div class="sr-left">
-            <form id="contactForm" class="space-y-5 bg-white p-8 rounded-3xl shadow-xl border border-white/20">
-              <div>
-                <label for="cName" class="block text-sm font-semibold text-caro-dark mb-2">Name</label>
-                <input id="cName" type="text" required class="form-input w-full rounded-xl px-4 py-3 text-sm text-caro-dark" placeholder="Your name" />
-              </div>
-              <div>
-                <label for="cEmail" class="block text-sm font-semibold text-caro-dark mb-2">Email</label>
-                <input id="cEmail" type="email" required class="form-input w-full rounded-xl px-4 py-3 text-sm text-caro-dark" placeholder="you@example.com" />
-              </div>
-              <div>
-                <label for="cMsg" class="block text-sm font-semibold text-caro-dark mb-2">Message</label>
-                <textarea id="cMsg" rows="5" required class="form-input w-full rounded-xl px-4 py-3 text-sm text-caro-dark resize-none" placeholder="Describe your request"></textarea>
-              </div>
-              <button type="submit" class="w-full rounded-xl bg-caro-orange hover:bg-caro-accent text-white font-semibold py-3.5 transition-all">Send Message</button>
-              <p id="formMsg" class="mt-3 text-sm text-center hidden"></p>
-            </form>
-          </div>
-          <div class="sr-right space-y-6">
-            <div class="rounded-3xl bg-[#0E162F] p-8 border border-white/10">
-              <div class="flex items-start gap-4">
-                <div class="w-11 h-11 rounded-2xl bg-caro-orange/10 flex items-center justify-center"><i data-lucide="map-pin" class="w-5 h-5 text-caro-orange"></i></div>
-                <div>
-                  <p class="text-white font-semibold">Address</p>
-                  <p id="contactAddress" class="text-white/60 mt-1 text-sm">123 Industrial Ave, Construction City, CC 45678</p>
-                </div>
-              </div>
-            </div>
-            <div class="rounded-3xl bg-[#0E162F] p-8 border border-white/10">
-              <div class="flex items-start gap-4">
-                <div class="w-11 h-11 rounded-2xl bg-caro-orange/10 flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5 text-caro-orange"></i></div>
-                <div>
-                  <p class="text-white font-semibold">Phone</p>
-                  <p id="contactPhone" class="text-white/60 mt-1 text-sm">0710241295</p>
-                </div>
-              </div>
-            </div>
-            <div class="rounded-3xl bg-[#0E162F] p-8 border border-white/10">
-              <div class="flex items-start gap-4">
-                <div class="w-11 h-11 rounded-2xl bg-caro-orange/10 flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5 text-caro-orange"></i></div>
-                <div>
-                  <p class="text-white font-semibold">Email</p>
-                  <p id="contactEmailDisplay" class="text-white/60 mt-1 text-sm">info@carohardware.com</p>
-                </div>
-              </div>
-            </div>
-            <div class="rounded-3xl bg-[#0E162F] p-8 border border-white/10 text-center">
-              <i data-lucide="map" class="w-12 h-12 text-white/30 mx-auto"></i>
-              <p class="mt-4 text-white/40 uppercase tracking-[0.2em] text-xs">Service area available</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="bg-[#0A1229] border-t border-white/10 py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-4 mb-10">
-          <div>
-            <div class="flex items-center gap-3 mb-5">
-              <div class="w-11 h-11 rounded-2xl bg-caro-orange flex items-center justify-center text-white"><i data-lucide="wrench" class="w-5 h-5"></i></div>
-              <div>
-                <p class="font-bold text-white">CARO HARDWARE</p>
-                <p class="text-white/50 text-sm">Premium hardware supply since 2010.</p>
-              </div>
-            </div>
-            <p class="text-white/40 text-sm leading-relaxed">Trusted by professionals and home renovators for tools, materials, and fast service.</p>
-          </div>
-          <div>
-            <p class="font-semibold text-white mb-4">Quick Links</p>
-            <nav class="space-y-3 text-white/50 text-sm">
-              <a href="#home" class="block hover:text-caro-orange transition-colors">Home</a>
-              <a href="#products" class="block hover:text-caro-orange transition-colors">Products</a>
-              <a href="#services" class="block hover:text-caro-orange transition-colors">Services</a>
-              <a href="#about" class="block hover:text-caro-orange transition-colors">About</a>
-              <a href="#contact" class="block hover:text-caro-orange transition-colors">Contact</a>
-            </nav>
-          </div>
-          <div>
-            <p class="font-semibold text-white mb-4">Services</p>
-            <div class="space-y-3 text-white/50 text-sm">
-              <p>Tool Rental</p>
-              <p>Delivery Services</p>
-              <p>Project Consultation</p>
-              <p>Bulk Supply</p>
-            </div>
-          </div>
-          <div>
-            <p class="font-semibold text-white mb-4">Connect</p>
-            <div class="flex flex-wrap gap-3">
-              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="facebook" class="w-4 h-4 text-white/70"></i></span>
-              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="twitter" class="w-4 h-4 text-white/70"></i></span>
-              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="instagram" class="w-4 h-4 text-white/70"></i></span>
-              <span class="w-11 h-11 rounded-2xl bg-white/5 hover:bg-caro-orange/20 flex items-center justify-center transition-colors cursor-pointer"><i data-lucide="linkedin" class="w-4 h-4 text-white/70"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="border-t border-white/10 pt-6 text-center text-white/40 text-sm">© 2026 Caro Hardware. All rights reserved.</div>
-      </div>
-    </footer>
-
-    <button id="backTop" class="back-top fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-caro-orange text-white shadow-2xl shadow-caro-orange/25 flex items-center justify-center hover:bg-caro-accent" aria-label="Scroll back to top">
-      <i data-lucide="chevron-up" class="w-5 h-5"></i>
-    </button>
-
-    <div class="fixed bottom-24 right-6 z-50">
-      <button id="whatsappBtn" class="whatsapp-pulse w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-xl shadow-green-500/30 flex items-center justify-center transition-all" aria-label="Chat on WhatsApp" title="Order via WhatsApp">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
+      <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Toggle menu">
+       <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
       </button>
+     </div>
     </div>
-
-    <div id="whatsappMenu" class="fixed bottom-40 right-6 z-50 hidden w-72 overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
-      <div class="bg-green-500 px-4 py-3 text-sm font-semibold text-white">Order via WhatsApp</div>
-      <div id="whatsappProducts" class="max-h-64 overflow-y-auto"></div>
-      <div class="px-4 py-3 border-t border-slate-200 text-center">
-        <button id="quickOrder" class="w-full rounded-xl bg-green-50 text-green-700 font-semibold py-2 transition-colors hover:bg-green-100">Quick Order</button>
+    <div id="mobileMenu" class="mobile-menu md:hidden border-t border-white/5" style="background: rgba(10,14,39,0.95);">
+     <div class="px-4 py-4 flex flex-col gap-3">
+      <a href="#home" class="text-white/70 hover:text-caro-orange py-2 text-sm font-medium mobile-link">Home</a>
+      <a href="#products" class="text-white/70 hover:text-caro-orange py-2 text-sm font-medium mobile-link">Products</a>
+      <a href="#services" class="text-white/70 hover:text-caro-orange py-2 text-sm font-medium mobile-link">Services</a>
+      <a href="#about" class="text-white/70 hover:text-caro-orange py-2 text-sm font-medium mobile-link">About</a>
+      <a href="#contact" class="text-white/70 hover:text-caro-orange py-2 text-sm font-medium mobile-link">Contact</a>
+     </div>
+    </div>
+   </nav>
+   <!-- HERO -->
+   <section id="home" class="hero-pattern relative min-h-[600px] flex items-center pt-20 overflow-hidden">
+    <div class="geo-circle top-10 -right-20 opacity-30"></div>
+    <div class="geo-circle -bottom-20 -left-10 opacity-20" style="width:200px;height:200px;"></div>
+    <div class="absolute top-24 right-12 w-1 h-32 bg-caro-orange/20 hidden lg:block"></div>
+    <div class="absolute bottom-20 right-40 w-20 h-1 bg-caro-orange/20 hidden lg:block"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 relative z-10">
+     <div class="max-w-2xl">
+      <div class="hero-anim-1 flex items-center gap-3 mb-6">
+       <div class="w-12 h-[2px] bg-caro-orange"></div><span class="font-mono-brand text-caro-orange text-xs tracking-[0.2em] uppercase">Est. 2010</span>
       </div>
+      <h1 id="heroHeadline" class="hero-anim-1 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">Quality Hardware Solutions for Every Project</h1>
+      <p id="heroSub" class="hero-anim-2 mt-6 text-white/60 text-lg sm:text-xl leading-relaxed max-w-xl">Your trusted partner in construction and home improvement. Premium tools, materials, and expert advice — all under one roof.</p>
+      <div class="hero-anim-3 mt-10 flex flex-wrap gap-4">
+       <a href="#products" class="bg-caro-orange hover:bg-caro-accent text-white px-8 py-3.5 rounded-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-caro-orange/25 text-sm">Shop Now</a>
+       <a href="#contact" class="border border-white/20 hover:border-caro-orange text-white px-8 py-3.5 rounded-sm font-semibold tracking-wide transition-all hover:bg-white/5 text-sm">Contact Us</a>
+      </div>
+      <div class="hero-anim-3 mt-16 flex gap-10">
+       <div>
+        <span class="text-3xl font-bold text-white">15K+</span>
+        <p class="text-white/40 text-xs mt-1 font-mono-brand tracking-wide">PRODUCTS</p>
+       </div>
+       <div>
+        <span class="text-3xl font-bold text-white">10K+</span>
+        <p class="text-white/40 text-xs mt-1 font-mono-brand tracking-wide">CUSTOMERS</p>
+       </div>
+       <div>
+        <span class="text-3xl font-bold text-white">14</span>
+        <p class="text-white/40 text-xs mt-1 font-mono-brand tracking-wide">YEARS</p>
+       </div>
+      </div>
+     </div>
     </div>
+   </section>
+   <!-- PRODUCTS -->
+   <section id="products" class="bg-caro-light py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16 sr">
+      <span class="premium-badge">Our Catalog</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-caro-dark mt-4">Product Categories</h2>
+      <div class="accent-line w-16 mx-auto mt-4"></div>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid"></div>
+    </div>
+   </section>
+   <!-- SERVICES -->
+   <section id="services" class="bg-caro-dark py-20 sm:py-28 relative border-t border-white/5">
+    <div class="stripe-accent absolute inset-0 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="text-center mb-16 sr">
+      <span class="premium-badge">What We Offer</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-4">Our Services</h2>
+      <div class="accent-line w-16 mx-auto mt-4"></div>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="serviceGrid"></div>
+    </div>
+   </section>
+   <!-- ABOUT -->
+   <section id="about" class="bg-caro-light py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="sr-left">
+       <div class="aspect-square max-w-md bg-caro-gray rounded-sm relative overflow-hidden mx-auto lg:mx-0">
+        <div class="absolute inset-0 flex items-center justify-center">
+         <div class="text-center">
+          <i data-lucide="building-2" class="w-20 h-20 text-caro-orange/40 mx-auto"></i>
+          <p class="text-white/30 font-mono-brand text-xs mt-4 tracking-widest">SINCE 2010</p>
+         </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-caro-orange"></div>
+        <div class="absolute top-0 right-0 w-1 h-20 bg-caro-orange/30"></div>
+       </div>
+      </div>
+      <div class="sr-right">
+       <span class="premium-badge">Who We Are</span>
+       <h2 id="aboutTitle" class="text-3xl sm:text-4xl font-bold text-caro-dark mt-4">About Caro Hardware</h2>
+       <div class="accent-line w-16 mt-4 mb-6"></div>
+       <p id="aboutText" class="text-caro-dark/70 leading-relaxed text-base">Founded in 2010, Caro Hardware has grown from a small local shop to one of the region's most trusted hardware suppliers. We are committed to providing premium-quality tools, building materials, and expert guidance to contractors, builders, and homeowners alike. Our mission is to empower every project with the right tools and the right advice.</p>
+       <div class="mt-8 grid grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded-sm border-l-2 border-caro-orange">
+         <p class="font-bold text-caro-dark text-lg">Quality First</p>
+         <p class="text-caro-dark/50 text-sm mt-1">Only trusted brands</p>
+        </div>
+        <div class="bg-white p-4 rounded-sm border-l-2 border-caro-orange">
+         <p class="font-bold text-caro-dark text-lg">Expert Team</p>
+         <p class="text-caro-dark/50 text-sm mt-1">Decades of experience</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- TESTIMONIALS -->
+   <section class="bg-caro-gray py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16 sr">
+      <span class="premium-badge">Testimonials</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3">What Customers Say</h2>
+      <div class="w-16 h-[3px] bg-caro-orange mx-auto mt-4"></div>
+     </div>
+     <div class="relative overflow-hidden sr">
+      <div class="testimonial-track" id="testimonialTrack"></div>
+      <div class="flex justify-center gap-3 mt-8">
+       <button id="prevTest" class="w-10 h-10 rounded-full border border-white/20 hover:border-caro-orange text-white flex items-center justify-center transition-colors" aria-label="Previous testimonial">
+        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+       </button>
+       <div id="testDots" class="flex items-center gap-2"></div>
+       <button id="nextTest" class="w-10 h-10 rounded-full border border-white/20 hover:border-caro-orange text-white flex items-center justify-center transition-colors" aria-label="Next testimonial">
+        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- CONTACT -->
+   <section id="contact" class="bg-caro-light py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16 sr">
+      <span class="font-mono-brand text-caro-orange text-xs tracking-[0.2em] uppercase">Get In Touch</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-caro-dark mt-3">Contact Us</h2>
+      <div class="w-16 h-[3px] bg-caro-orange mx-auto mt-4"></div>
+     </div>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="sr-left">
+       <form id="contactForm" class="bg-white p-8 rounded-sm shadow-sm">
+        <div class="mb-5">
+         <label for="cName" class="block text-sm font-semibold text-caro-dark mb-2">Name</label>
+         <input id="cName" type="text" class="form-input w-full border border-caro-dark/10 rounded-sm px-4 py-3 text-sm bg-caro-light/50 transition-all" placeholder="Your name" required>
+        </div>
+        <div class="mb-5">
+         <label for="cEmail" class="block text-sm font-semibold text-caro-dark mb-2">Email</label>
+         <input id="cEmail" type="email" class="form-input w-full border border-caro-dark/10 rounded-sm px-4 py-3 text-sm bg-caro-light/50 transition-all" placeholder="you@email.com" required>
+        </div>
+        <div class="mb-6">
+         <label for="cMsg" class="block text-sm font-semibold text-caro-dark mb-2">Message</label>
+         <textarea id="cMsg" rows="4" class="form-input w-full border border-caro-dark/10 rounded-sm px-4 py-3 text-sm bg-caro-light/50 transition-all resize-none" placeholder="How can we help?" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-caro-orange hover:bg-caro-accent text-white py-3.5 rounded-sm font-semibold text-sm tracking-wide transition-colors">Send Message</button>
+        <p id="formMsg" class="mt-3 text-sm text-center hidden"></p>
+       </form>
+      </div>
+      <div class="sr-right space-y-6">
+       <div class="flex items-start gap-4">
+        <div class="w-11 h-11 bg-caro-orange/10 rounded-sm flex items-center justify-center flex-shrink-0">
+         <i data-lucide="map-pin" class="w-5 h-5 text-caro-orange"></i>
+        </div>
+        <div>
+         <p class="font-semibold text-caro-dark">Address</p>
+         <p id="contactAddress" class="text-caro-dark/60 text-sm mt-1">123 Industrial Ave, Construction City, CC 45678</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-11 h-11 bg-caro-orange/10 rounded-sm flex items-center justify-center flex-shrink-0">
+         <i data-lucide="phone" class="w-5 h-5 text-caro-orange"></i>
+        </div>
+        <div>
+         <p class="font-semibold text-caro-dark">Phone</p>
+         <p id="contactPhone" class="text-caro-dark/60 text-sm mt-1">+1 (555) 234-5678</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-11 h-11 bg-caro-orange/10 rounded-sm flex items-center justify-center flex-shrink-0">
+         <i data-lucide="mail" class="w-5 h-5 text-caro-orange"></i>
+        </div>
+        <div>
+         <p class="font-semibold text-caro-dark">Email</p>
+         <p id="contactEmailDisplay" class="text-caro-dark/60 text-sm mt-1">info@carohardware.com</p>
+        </div>
+       </div>
+       <div class="bg-caro-gray rounded-sm aspect-video flex items-center justify-center mt-4">
+        <div class="text-center">
+         <i data-lucide="map" class="w-12 h-12 text-white/20 mx-auto"></i>
+         <p class="text-white/30 text-sm mt-2 font-mono-brand tracking-wide">MAP PLACEHOLDER</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- FOOTER -->
+   <footer class="bg-caro-dark border-t border-white/5 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <div>
+       <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 bg-caro-orange rounded-sm flex items-center justify-center">
+         <i data-lucide="wrench" class="w-4 h-4 text-white"></i>
+        </div>
+        <span class="font-mono-brand font-bold text-white tracking-tight">CARO<span class="text-caro-orange">.</span></span>
+       </div>
+       <p class="text-white/40 text-sm leading-relaxed">Quality hardware solutions for professionals and DIY enthusiasts since 2010.</p>
+      </div>
+      <div>
+       <h4 class="text-white font-semibold text-sm mb-4">Quick Links</h4>
+       <nav class="flex flex-col gap-2">
+        <a href="#home" class="text-white/40 hover:text-caro-orange text-sm transition-colors">Home</a>
+        <a href="#products" class="text-white/40 hover:text-caro-orange text-sm transition-colors">Products</a>
+        <a href="#services" class="text-white/40 hover:text-caro-orange text-sm transition-colors">Services</a>
+        <a href="#about" class="text-white/40 hover:text-caro-orange text-sm transition-colors">About</a>
+        <a href="#contact" class="text-white/40 hover:text-caro-orange text-sm transition-colors">Contact</a>
+       </nav>
+      </div>
+      <div>
+       <h4 class="text-white font-semibold text-sm mb-4">Services</h4>
+       <nav class="flex flex-col gap-2">
+        <span class="text-white/40 text-sm">Tool Rental</span>
+        <span class="text-white/40 text-sm">Delivery Services</span>
+        <span class="text-white/40 text-sm">Consultation</span>
+        <span class="text-white/40 text-sm">Bulk Supply</span>
+       </nav>
+      </div>
+      <div>
+       <h4 class="text-white font-semibold text-sm mb-4">Follow Us</h4>
+       <div class="flex gap-3">
+        <a href="https://facebook.com/carohardware" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/5 hover:bg-caro-orange/20 rounded-sm flex items-center justify-center transition-colors"><i data-lucide="facebook" class="w-4 h-4 text-white/60"></i></a>
+        <a href="https://twitter.com/carohardware" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/5 hover:bg-caro-orange/20 rounded-sm flex items-center justify-center transition-colors"><i data-lucide="twitter" class="w-4 h-4 text-white/60"></i></a>
+        <a href="https://instagram.com/carohardware" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/5 hover:bg-caro-orange/20 rounded-sm flex items-center justify-center transition-colors"><i data-lucide="instagram" class="w-4 h-4 text-white/60"></i></a>
+        <a href="https://linkedin.com/company/carohardware" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/5 hover:bg-caro-orange/20 rounded-sm flex items-center justify-center transition-colors"><i data-lucide="linkedin" class="w-4 h-4 text-white/60"></i></a>
+       </div>
+      </div>
+     </div>
+     <div class="border-t border-white/5 pt-8 text-center">
+      <p class="text-white/30 text-sm">© 2026 Caro Hardware. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+   <!-- Back to top -->
+   <button id="backTop" class="back-top fixed bottom-6 right-6 w-12 h-12 bg-caro-orange hover:bg-caro-accent text-white rounded-full shadow-lg flex items-center justify-center transition-colors z-50" aria-label="Back to top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+   </button>
+   <!-- WhatsApp floating button -->
+   <div class="fixed bottom-24 right-6 z-50">
+    <button id="whatsappBtn" class="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 whatsapp-pulse" aria-label="Chat on WhatsApp" title="Order via WhatsApp">
+     <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </button>
+   </div>
+   <!-- WhatsApp Menu -->
+   <div id="whatsappMenu" class="fixed bottom-40 right-6 z-50 bg-white rounded-lg shadow-xl overflow-hidden hidden">
+    <div class="bg-green-500 text-white px-4 py-3 font-semibold text-sm">Order via WhatsApp</div>
+    <div id="whatsappProducts" class="max-h-64 overflow-y-auto"></div>
+    <div class="px-4 py-2 border-t bg-gray-50 text-center">
+     <button id="quickOrder" class="text-green-600 hover:text-green-700 text-sm font-semibold w-full py-2 rounded transition-colors">Quick Order</button>
+    </div>
+   </div>
   </div>
-
-  <script src="main.js"></script>
-</body>
+  <script defer src="script.js"></script>
+ </body>
 </html>
