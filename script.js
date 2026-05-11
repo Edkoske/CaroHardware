@@ -98,8 +98,8 @@ function renderProducts() {
       event.preventDefault();
       const productName = link.dataset.product;
       const message = encodeURIComponent(`Hi Caro Hardware, I'm interested in browsing ${productName}. Can you show me available options and pricing?`);
-      const whatsappUrl = `https://wa.me/1234567890?text=${message}`;
-      window.open(whatsappUrl, '_blank', 'noopener noreferrer');
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=edisonkipkemoi319@gmail.com&su=Browse ${productName}&body=${message}`;
+      window.open(gmailUrl, '_blank');
     });
   });
 }
@@ -204,7 +204,14 @@ function setupContactForm() {
   const formMsg = document.getElementById('formMsg');
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    formMsg.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
+    const name = document.getElementById('cName').value;
+    const email = document.getElementById('cEmail').value;
+    const message = document.getElementById('cMsg').value;
+    const subject = encodeURIComponent(`Contact from ${name}`);
+    const body = encodeURIComponent(`From: ${email}\n\n${message}`);
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=edisonkipkemoi319@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailUrl, '_blank');
+    formMsg.textContent = '✓ Gmail compose opened! Please send the email.';
     formMsg.className = 'mt-3 text-sm text-center text-green-600 font-medium';
     formMsg.classList.remove('hidden');
     contactForm.reset();
@@ -231,14 +238,13 @@ function setupWhatsapp() {
   const whatsappMenu = document.getElementById('whatsappMenu');
   const whatsappProducts = document.getElementById('whatsappProducts');
   const quickOrder = document.getElementById('quickOrder');
-  const WHATSAPP_PHONE = '1234567890';
-  const WHATSAPP_API = `https://wa.me/${WHATSAPP_PHONE}`;
+  const GMAIL_TO = 'edisonkipkemoi319@gmail.com';
 
   whatsappBtn.addEventListener('click', (event) => {
     event.stopPropagation();
     whatsappMenu.classList.toggle('hidden');
     if (!whatsappMenu.classList.contains('hidden')) {
-      renderWhatsappProducts(whatsappProducts, WHATSAPP_API);
+      renderWhatsappProducts(whatsappProducts, GMAIL_TO);
     }
   });
 
@@ -250,17 +256,18 @@ function setupWhatsapp() {
 
   quickOrder.addEventListener('click', () => {
     const message = encodeURIComponent('Hi Caro Hardware! I\'d like to place an order. Please help me with available products and pricing.');
-    window.open(`${WHATSAPP_API}?text=${message}`, '_blank', 'noopener noreferrer');
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_TO}&su=Quick Order&body=${message}`;
+    window.open(gmailUrl, '_blank');
     whatsappMenu.classList.add('hidden');
   });
 }
 
-function renderWhatsappProducts(container, apiUrl) {
+function renderWhatsappProducts(container, gmailTo) {
   container.innerHTML = products
     .map(
       (product) => `
-      <button class="w-full px-4 py-2 text-left hover:bg-green-50 border-b text-sm font-medium text-caro-dark transition-colors whatsapp-product-item" data-product="${product.title}">
-        <span class="text-green-600 mr-2">✓</span>${product.title}
+      <button class="w-full px-4 py-2 text-left hover:bg-blue-50 border-b text-sm font-medium text-caro-dark transition-colors whatsapp-product-item" data-product="${product.title}">
+        <span class="text-blue-600 mr-2">✓</span>${product.title}
       </button>`
     )
     .join('');
@@ -270,7 +277,8 @@ function renderWhatsappProducts(container, apiUrl) {
       event.preventDefault();
       const name = item.dataset.product;
       const message = encodeURIComponent(`Hi Caro Hardware, I'm interested in ordering: ${name}. Can you provide more details and pricing?`);
-      window.open(`${apiUrl}?text=${message}`, '_blank', 'noopener noreferrer');
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${gmailTo}&su=Product Inquiry: ${name}&body=${message}`;
+      window.open(gmailUrl, '_blank');
       document.getElementById('whatsappMenu').classList.add('hidden');
     });
   });
