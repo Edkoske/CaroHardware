@@ -85,7 +85,7 @@ function renderProducts() {
         <h3 class="font-bold text-caro-dark text-lg">${product.title}</h3>
         <p class="text-caro-dark/50 text-sm mt-2 leading-relaxed">${product.desc}</p>
         <div class="browse-link mt-4 flex items-center gap-1 text-caro-orange text-sm font-semibold cursor-pointer hover:gap-2 transition-all" data-product="${product.title}">
-          <span>Browse</span>
+          <span>Order</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </div>
       </div>`;
@@ -97,9 +97,9 @@ function renderProducts() {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const productName = link.dataset.product;
-      const message = encodeURIComponent(`Hi Caro Hardware, I'm interested in browsing ${productName}. Can you show me available options and pricing?`);
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=edisonkipkemoi319@gmail.com&su=Browse ${productName}&body=${message}`;
-      window.open(gmailUrl, '_blank');
+      const message = encodeURIComponent(`Hi Caro Hardware, I'm interested in ordering ${productName}. Can you show me available options and pricing?`);
+      const whatsappUrl = `https://wa.me/0710241295?text=${message}`;
+      window.open(whatsappUrl, '_blank');
     });
   });
 }
